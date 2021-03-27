@@ -1,2 +1,9 @@
-# No-Input
-Input Plugin for mupen64-rr-lua which aims to do nothing
+# No Plugins
+A collection of Plugins for Mupen64 which do nothing.
+Links are below
+
+### Links
+[Video](https://github.com/Aurumaker72/No-Plugins/tree/video)<br>
+[Input](https://github.com/Aurumaker72/No-Plugins/tree/input)<br>
+[Sound](https://github.com/Aurumaker72/No-Plugins/tree/sound)<br>
+[RSP](https://github.com/Aurumaker72/No-Plugins/tree/rsp)
