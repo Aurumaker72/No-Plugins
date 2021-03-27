@@ -5,7 +5,6 @@
 #include <minwindef.h>
 #include <Windows.h>
 
-#define PLUGIN_NAME "No Input"
 
 EXPORT void CALL GetDllInfo(PLUGIN_INFO* PluginInfo)
 {

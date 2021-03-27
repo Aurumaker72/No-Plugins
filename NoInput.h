@@ -6,6 +6,9 @@
 extern "C" {
 #endif
 
+
+#define PLUGIN_NAME "No Input"
+
 #define PLUGIN_TYPE_CONTROLLER		4
 
 #define PLUGIN_NONE					1
