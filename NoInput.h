@@ -7,19 +7,21 @@ extern "C" {
 #endif
 
 #define PLUGIN_TYPE_CONTROLLER		4
+
 #define PLUGIN_NONE					1
 #define PLUGIN_MEMPAK				2
 #define PLUGIN_RUMBLE_PAK			3
 #define PLUGIN_TANSFER_PAK			4
 #define PLUGIN_RAW					5
 
+
 #define EXPORT						__declspec(dllexport)
 #define CALL						_cdecl
 
 	typedef struct {
-		WORD Version;   
-		WORD Type;      
-		char Name[100]; 
+		WORD Version;  
+		WORD Type;     
+		char Name[100];
 		BOOL Reserved1;
 		BOOL Reserved2;
 	} PLUGIN_INFO;
@@ -61,29 +63,27 @@ extern "C" {
 		HWND hMainWindow;
 		HINSTANCE hinst;
 
-		BOOL MemoryBswaped;		
-								
-								
-								
-		BYTE* HEADER;			
-		CONTROL* Controls;		
-								
+		BOOL MemoryBswaped;
+						
+		BYTE* HEADER;	
+		CONTROL* Controls;
+						
 	} CONTROL_INFO;
 
-
-	// yes, mupen, i will implement these functions dont worry >:)
-	//EXPORT void CALL CloseDLL(void);
-	//EXPORT void CALL ControllerCommand(int Control, BYTE* Command);
+	EXPORT void CALL CloseDLL(void);
+	EXPORT void CALL ControllerCommand(int Control, BYTE* Command);
 	EXPORT void CALL DllAbout(HWND hParent);
-//	EXPORT void CALL DllTest(HWND hParent);
+	EXPORT void CALL DllConfig(HWND hParent);
+	EXPORT void CALL DllTest(HWND hParent);
 	EXPORT void CALL GetDllInfo(PLUGIN_INFO* PluginInfo);
-	//EXPORT void CALL GetKeys(int Control, BUTTONS* Keys);
-	//EXPORT void CALL InitiateControllers(CONTROL_INFO ControlInfo);
-	//EXPORT void CALL ReadController(int Control, BYTE* Command);
+	EXPORT void CALL GetKeys(int Control, BUTTONS* Keys);
+	EXPORT void CALL InitiateControllers(CONTROL_INFO ControlInfo);
+	EXPORT void CALL ReadController(int Control, BYTE* Command);
 	EXPORT void CALL RomClosed(void);
 	EXPORT void CALL RomOpen(void);
-	//EXPORT void CALL WM_KeyDown(WPARAM wParam, LPARAM lParam);
-	//EXPORT void CALL WM_KeyUp(WPARAM wParam, LPARAM lParam);
+	EXPORT void CALL WM_KeyDown(WPARAM wParam, LPARAM lParam);
+	EXPORT void CALL WM_KeyUp(WPARAM wParam, LPARAM lParam);
+
 
 #if defined(__cplusplus)
 }
