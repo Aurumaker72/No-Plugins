@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/Video-yes-green?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Input-yes-green?style=for-the-badge"/>
     <img src="https://img.shields.io/badge/Audio-yes-green?style=for-the-badge"/>
-    <img src="https://img.shields.io/badge/Video-causes%20freeze-orange?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/RSP-causes%20freeze-green?style=for-the-badge"/>
 </p>
 
 # Links
