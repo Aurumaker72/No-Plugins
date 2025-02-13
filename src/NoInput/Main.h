@@ -88,10 +88,42 @@ typedef struct {
   void (*CheckInterrupts)(void);
 } GFX_INFO;
 
+  
+  using BUTTONS = union {
+    DWORD Value;
+
+    struct
+    {
+      unsigned R_DPAD : 1;
+      unsigned L_DPAD : 1;
+      unsigned D_DPAD : 1;
+      unsigned U_DPAD : 1;
+      unsigned START_BUTTON : 1;
+      unsigned Z_TRIG : 1;
+      unsigned B_BUTTON : 1;
+      unsigned A_BUTTON : 1;
+
+      unsigned R_CBUTTON : 1;
+      unsigned L_CBUTTON : 1;
+      unsigned D_CBUTTON : 1;
+      unsigned U_CBUTTON : 1;
+      unsigned R_TRIG : 1;
+      unsigned L_TRIG : 1;
+      unsigned Reserved1 : 1;
+      unsigned Reserved2 : 1;
+
+      signed X_AXIS : 8;
+
+      signed Y_AXIS : 8;
+    };
+  };
+
+
 EXPORT void CALL DllAbout(HWND hParent);
 EXPORT void CALL GetDllInfo(PLUGIN_INFO *PluginInfo);
 EXPORT void CALL InitiateControllers(HWND hMainWindow, CONTROL Controls[4]);
-
+EXPORT void CALL GetKeys(int Control, BUTTONS* Keys);
+  
 #if defined(__cplusplus)
 }
 #endif
